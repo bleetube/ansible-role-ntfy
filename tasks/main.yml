@@ -1,0 +1,22 @@
+---
+- name: Install ntfy (Debian)
+  import_tasks: Debian.yml
+  when: ansible_os_family == 'Debian'
+
+- name: Install ntfy (non-Debian)
+  ansible.builtin.package:
+    name: ntfy
+    state: present
+  when: ansible_os_family != 'Debian'
+
+- name: Ensure ntfy is enabled on boot
+  ansible.builtin.service:
+    name: ntfy
+    enabled: true
+    state: started
+
+- name: Update /etc/ntfy/server.yml
+  ansible.builtin.template:
+    src: server.yml.j2
+    dest: /etc/ntfy/server.yml
+  notify: restart ntfy

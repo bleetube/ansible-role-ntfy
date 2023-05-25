@@ -1,0 +1,6 @@
+---
+ntfy_base_url: ''
+ntfy_listen_http: ":80"
+ntfy_cache_file: /var/cache/ntfy/cache.db
+ntfy_behind_proxy: 'true'
+ntfy_attachment_cache_dir: /var/cache/ntfy/attachments

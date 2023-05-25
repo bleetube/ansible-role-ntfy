@@ -9,6 +9,14 @@
     state: present
   when: ansible_os_family != 'Debian'
 
+- name: Ensure directory for ntfy domain sockets
+  ansible.builtin.file:
+    path: /var/run/ntfy
+    state: directory
+    owner: ntfy
+    group: ntfy
+    mode: '0755'
+
 - name: Ensure ntfy is enabled on boot
   ansible.builtin.service:
     name: ntfy

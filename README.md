@@ -25,3 +25,7 @@ For more configuration info, see the upstream [configuration docs](https://docs.
     - role: bleetube.ntfy
       become: true
 ```
+
+## Resources
+
+* binwiederhier publishes the [configuration for his production server](https://github.com/binwiederhier/ntfy-ansible/blob/main/roles/ntfy/templates/server.yml.j2) in an Ansible playbook.

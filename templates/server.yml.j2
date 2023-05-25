@@ -25,8 +25,8 @@ listen-http: "{{ ntfy_listen_http }}"
 # Listen on a Unix socket, e.g. /var/lib/ntfy/ntfy.sock
 # This can be useful to avoid port issues on local systems, and to simplify permissions.
 #
-# listen-unix: <socket-path>
-# listen-unix-mode: <linux permissions, e.g. 0700>
+listen-unix: {{ ntfy_listen_unix }}
+listen-unix-mode: {{ ntfy_listen_unix_mode }}
 
 # Path to the private key & cert file for the HTTPS web server. Not used if "listen-https" is not set.
 #

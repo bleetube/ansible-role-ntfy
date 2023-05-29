@@ -12,8 +12,14 @@
     path: /etc/apt/sources.list.d/ntfy.list
     line: deb [arch=amd64 signed-by=/usr/share/keyrings/archive.heckel.io.asc] https://archive.heckel.io/apt debian main
     create: true
+  register: ntfy_repo
+
+- name: Update the apt repository cache
+  ansible.builtin.apt:
+    update_cache: yes
+  when: ntfy_repo.changed
 
 - name: Install the ntfy package
   ansible.builtin.apt:
     name: ntfy
-    state: present
+    state: latest

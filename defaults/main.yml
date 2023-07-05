@@ -4,5 +4,6 @@ ntfy_listen_http: ":80"
 ntfy_cache_file: /var/cache/ntfy/cache.db
 ntfy_behind_proxy: 'true'
 ntfy_attachment_cache_dir: /var/cache/ntfy/attachments
-ntfy_listen_unix: /run/ntfy/ntfy.sock
+ntfy_listen_unix: /var/lib/ntfy/ntfy.sock
 ntfy_listen_unix_mode: '0666'
+ntfy_web_root: /

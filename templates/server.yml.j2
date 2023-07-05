@@ -185,7 +185,7 @@ attachment-cache-dir: "{{ ntfy_attachment_cache_dir }}"
 # the values "app" (maps to "/"), "home" (maps to "/app"), or "disable" (maps to "") to disable
 # the web app entirely.
 #
-# web-root: /
+web-root: {{ ntfy_web_root }}
 
 # Various feature flags used to control the web app, and API access, mainly around user and
 # account management.

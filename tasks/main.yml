@@ -11,7 +11,7 @@
 
 - name: Ensure directory for ntfy domain sockets
   ansible.builtin.file:
-    path: /var/run/ntfy
+    path: /var/lib/ntfy
     state: directory
     owner: ntfy
     group: ntfy

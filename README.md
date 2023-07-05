@@ -1,6 +1,8 @@
 # Ansible Role: ntfy
 
-This Ansible Role installs [ntfy](https://github.com/binwiederhier/ntfy).
+This Ansible Role installs binwiederhier's [ntfy](https://github.com/binwiederhier/ntfy).
+
+Related role: [ansible-role-ntfy-alertmanager](https://github.com/bleetube/ansible-role-ntfy-alertmanager) for xenrox's ntfy-alertmanager integration.
 
 ## Requirements
 
